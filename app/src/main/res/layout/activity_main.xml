@@ -1,20 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/rstn_input"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Escribe algo aquí" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/rstn_btnEnviar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ir a la Segunda Pantalla"
-        android:layout_marginTop="16dp"/>
-</LinearLayout>
+        <EditText android:id="@+id/rstn_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:enabled="false" />
+
+        <EditText android:id="@+id/rstn_apellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido"
+            android:enabled="false" />
+
+        <EditText android:id="@+id/rstn_dividendo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dividendo"
+            android:enabled="false" />
+
+        <EditText android:id="@+id/rstn_divisor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Divisor"
+            android:enabled="false" />
+
+        <EditText android:id="@+id/rstn_parte_entera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Parte Entera"
+            android:enabled="false" />
+
+        <EditText android:id="@+id/rstn_residuo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Residuo"
+            android:enabled="false" />
+
+        <EditText android:id="@+id/rstn_invertido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número Invertido"
+            android:enabled="false" />
+
+        <Button android:id="@+id/rstn_btn_siguiente_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente" />
+
+        <Button android:id="@+id/rstn_btn_resultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Resultados"
+            android:enabled="false" />
+
+    </LinearLayout>
+</ScrollView>
