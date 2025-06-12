@@ -2,6 +2,7 @@ package com.example.prueba02_01_rene_tipan;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             nombre = extras.getString("rstn_nombre", "");
             apellido = extras.getString("rstn_apellido", "");
             dividendo = extras.getInt("rstn_dividendo", 0);
-            divisor = extras.getInt("rstn_divisor", 1);
+            divisor = extras.getInt("rstn_divisor", 0);
             numero = extras.getInt("rstn_numero", 0);
 
             rstn_nombre.setText(nombre);
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             rstn_divisor.setText(String.valueOf(divisor));
 
             rstn_btnMostrar.setEnabled(true);
+            rstn_btnMostrar.setBackgroundColor(Color.parseColor("#008000"));
         }
 
         rstn_btnSiguiente.setOnClickListener(v -> {
@@ -54,24 +56,51 @@ public class MainActivity extends AppCompatActivity {
             i.putExtra("rstn_nombre", rstn_nombre.getText().toString());
             i.putExtra("rstn_apellido", rstn_apellido.getText().toString());
             i.putExtra("rstn_dividendo", Integer.parseInt(rstn_dividendo.getText().toString().isEmpty() ? "0" : rstn_dividendo.getText().toString()));
-            i.putExtra("rstn_divisor", Integer.parseInt(rstn_divisor.getText().toString().isEmpty() ? "1" : rstn_divisor.getText().toString()));
+            i.putExtra("rstn_divisor", Integer.parseInt(rstn_divisor.getText().toString().isEmpty() ? "0" : rstn_divisor.getText().toString()));
             i.putExtra("rstn_numero", numero);
             startActivity(i);
         });
 
         rstn_btnMostrar.setOnClickListener(v -> {
 
-            rstn_parteEntera.setText(calcularPparteraEntera(dividendo, divisor));
-            rstn_residuo.setText(calcularResiduo(dividendo, divisor));
-            rstn_numInvertido.setText(invertido);
+            rstn_parteEntera.setText(String.valueOf(calcularParteEntera(dividendo, divisor)));
+            rstn_residuo.setText(String.valueOf(calcularResiduo(dividendo, divisor)));
+            rstn_numInvertido.setText(calcularInvertido(numero));
         });
     }
 
-    public  String calcularPparteraEntera(int dividendo, int divisor) {
-        return "sebas";
+    public int calcularParteEntera(int dividendo, int divisor) {
+        int contador = 0;
+        int suma = divisor;
+
+        while (suma <= dividendo) {
+            suma += divisor;
+            contador++;
+        }
+        return contador;
     }
-    public  String calcularResiduo(int dividendo, int divisor) {
-        return "sebas";
+
+    public int calcularResiduo(int dividendo, int divisor) {
+        int suma = divisor;
+
+        while (suma <= dividendo) {
+            suma += divisor;
+        }
+
+        int residuo = dividendo - (suma - divisor);
+        return residuo;
+    }
+
+    public String calcularInvertido(int numero) {
+        int invertido = 0;
+
+        while (numero != 0) {
+            int digito = numero % 10;
+            invertido = invertido * 10 + digito;
+            numero = numero / 10;
+        }
+
+        return String.valueOf(invertido);
     }
 
 }

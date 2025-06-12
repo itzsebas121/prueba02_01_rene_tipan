@@ -9,58 +9,156 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <EditText android:id="@+id/rstn_nombre"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre"
-            android:enabled="false" />
+            android:orientation="horizontal">
 
-        <EditText android:id="@+id/rstn_apellido"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/rstn_nombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Nombre" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Apellido"
-            android:enabled="false" />
+            android:orientation="horizontal">
 
-        <EditText android:id="@+id/rstn_dividendo"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apellido:"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/rstn_apellido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Apellido" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Dividendo"
-            android:enabled="false" />
+            android:orientation="horizontal">
 
-        <EditText android:id="@+id/rstn_divisor"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dividendo:"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/rstn_dividendo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Dividendo" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Divisor"
-            android:enabled="false" />
+            android:orientation="horizontal">
 
-        <EditText android:id="@+id/rstn_parte_entera"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Divisor:"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+            <EditText
+                android:id="@+id/rstn_divisor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Divisor" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Parte Entera"
-            android:enabled="false" />
+            android:orientation="horizontal">
 
-        <EditText android:id="@+id/rstn_residuo"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parte Entera:"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/rstn_parte_entera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Parte Entera" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Residuo"
-            android:enabled="false" />
-
-        <EditText android:id="@+id/rstn_invertido"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Residuo:"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+            <EditText
+                android:id="@+id/rstn_residuo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Residuo" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número Invertido"
-            android:enabled="false" />
+            android:orientation="horizontal">
 
-        <Button android:id="@+id/rstn_btn_siguiente_1"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número Invertido:"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/rstn_invertido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Número Invertido" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/rstn_btn_siguiente_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Siguiente" />
 
-        <Button android:id="@+id/rstn_btn_resultados"
+        <Button
+            android:id="@+id/rstn_btn_resultados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:text="Mostrar Resultados"
-            android:enabled="false" />
+            />
 
     </LinearLayout>
 </ScrollView>
