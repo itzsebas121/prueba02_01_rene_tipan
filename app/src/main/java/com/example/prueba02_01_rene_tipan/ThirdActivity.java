@@ -1,6 +1,7 @@
 package com.example.prueba02_01_rene_tipan;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +27,7 @@ public class ThirdActivity extends AppCompatActivity {
 
         rstn_nombre.setEnabled(false);
         rstn_apellido.setEnabled(false);
-
+        rstn_btnCerrar.setBackgroundColor(Color.parseColor("#FFFF00"));
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             rstn_nombre.setText(extras.getString("rstn_nombre", ""));

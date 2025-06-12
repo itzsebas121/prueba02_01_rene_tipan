@@ -4,34 +4,84 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre:"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
 
     <EditText android:id="@+id/rstn_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre"
         android:enabled="false" />
-
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido:"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
     <EditText android:id="@+id/rstn_apellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Apellido"
         android:enabled="false" />
-
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dividendo:"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
     <EditText android:id="@+id/rstn_dividendo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Dividendo" />
-
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divirsor:"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
     <EditText android:id="@+id/rstn_divisor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Divisor" />
-
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero:"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
     <EditText android:id="@+id/rstn_numero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Número" />
-
+    </LinearLayout>
     <Button android:id="@+id/rstn_btn_cerrar_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

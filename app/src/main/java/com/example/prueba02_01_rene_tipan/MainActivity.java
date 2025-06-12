@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         rstn_btnMostrar = findViewById(R.id.rstn_btn_resultados);
 
         rstn_btnMostrar.setEnabled(false);
-
+        rstn_btnSiguiente.setBackgroundColor(Color.parseColor("#008f39"));
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             nombre = extras.getString("rstn_nombre", "");
@@ -46,9 +46,11 @@ public class MainActivity extends AppCompatActivity {
             rstn_apellido.setText(apellido);
             rstn_dividendo.setText(String.valueOf(dividendo));
             rstn_divisor.setText(String.valueOf(divisor));
+            if(dividendo > 0 && divisor > 0){
+                rstn_btnMostrar.setEnabled(true);
+                rstn_btnMostrar.setBackgroundColor(Color.parseColor("#ffff00"));
+            }
 
-            rstn_btnMostrar.setEnabled(true);
-            rstn_btnMostrar.setBackgroundColor(Color.parseColor("#008000"));
         }
 
         rstn_btnSiguiente.setOnClickListener(v -> {

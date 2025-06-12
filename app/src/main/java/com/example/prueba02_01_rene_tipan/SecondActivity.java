@@ -1,6 +1,7 @@
 package com.example.prueba02_01_rene_tipan;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,8 +25,9 @@ public class SecondActivity extends AppCompatActivity {
         rstn_numero = findViewById(R.id.rstn_numero);
         rstn_btnSiguiente = findViewById(R.id.rstn_btn_siguiente_2);
         rstn_btnCerrar = findViewById(R.id.rstn_btn_cerrar_2);
-
+        rstn_btnSiguiente.setBackgroundColor(Color.parseColor("#008f39"));
         Bundle extras = getIntent().getExtras();
+        rstn_btnCerrar.setBackgroundColor(Color.parseColor("#FFFF00"));
         if (extras != null) {
             rstn_nombre.setText(extras.getString("rstn_nombre", ""));
             rstn_apellido.setText(extras.getString("rstn_apellido", ""));
